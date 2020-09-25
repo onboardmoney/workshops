@@ -1,5 +1,5 @@
 {
-  "name": "@project/monorepo",
+  "name": "@bot-boilerplate/monorepo",
   "version": "1.0.0",
   "keywords": [
     "ethereum",
@@ -9,15 +9,9 @@
   ],
   "private": true,
   "scripts": {
-    "subgraph:auth": "yarn workspace @project/subgraph auth",
-    "subgraph:codegen": "yarn workspace @project/subgraph codegen",
-    "subgraph:build": "yarn workspace @project/subgraph build",
-    "subgraph:deploy": "yarn workspace @project/subgraph deploy",
-    "react-app:build": "yarn workspace @project/react-app build",
-    "react-app:eject": "yarn workspace @project/react-app eject",
-    "react-app:ipfs": "yarn workspace @project/react-app ipfs",
-    "react-app:start": "yarn workspace @project/react-app start",
-    "react-app:test": "yarn workspace @project/react-app test"
+    "clean": "rimraf */node_modules */dist && rimraf ./node_modules ./dist",
+    "subgraph": "yarn workspace @farmerbot/subgraph",
+    "bot": "yarn workspace @farmerbot/bot"
   },
   "workspaces": {
     "nohoist": [
@@ -25,7 +19,8 @@
       "**/@graphprotocol/graph-ts/**"
     ],
     "packages": [
-      "packages/*"
+      "packages/bot",
+      "packages/subgraph"
     ]
   }
 }
