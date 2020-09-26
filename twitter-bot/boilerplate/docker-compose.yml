@@ -1,7 +1,7 @@
-version: "3.8"
+version: '3.8'
 
 services:
-  farmerbot.bot:
+  bot:
     build:
       context: .
       target: development
@@ -15,20 +15,18 @@ services:
     env_file:
       - .env
     networks:
-      - farmerbot.network
+      - network
     depends_on:
-      - farmerbot.redis
+      - redis
 
-  farmerbot.redis:
+  redis:
     image: redis:5
     networks:
-      - farmerbot.network
+      - network
     volumes:
-      # - farmerbot.data:/data
       - ./data:/data
 
-
 networks:
-  farmerbot.network:
+  network:
 volumes:
-  farmerbot.data:
+  data:
