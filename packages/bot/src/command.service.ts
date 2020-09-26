@@ -1,4 +1,3 @@
-import { getAddress } from '@ethersproject/address';
 import { InfuraProvider } from '@ethersproject/providers';
 import { Injectable, Logger, Inject } from '@nestjs/common';
 import { App } from '@onboardmoney/sdk';
