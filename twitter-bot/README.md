@@ -24,8 +24,6 @@ You'll need a twitter developer account to get started. In can take a few hours 
 
 Once your account is active, create a new project and store your api keys somewhere safe.
 
-![](https://i.imgur.com/1zuztJn.png)
-
 ## Clone this repository
 
 ```shell
